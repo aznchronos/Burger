@@ -1,9 +1,15 @@
 var orm = require("../config/orm.js");
 
-orm.selectAll()
+var burgerTime = {
+    selectAll: function(){
 
-orm.insertOne()
+    },
+    insertOne: function(){
 
-orm.updateOne()
+    },
+    updateOne: function(){
+
+    }
+}
 
 module.exports = burger;
