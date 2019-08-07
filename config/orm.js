@@ -51,7 +51,8 @@ var orm = {
         console.log(queryString);
 
         connection.query(queryString, vals, function (err, result) {
-            // if (err) throw err;
+            console.log("This is the error in orm " + err)
+            if (err) throw err;
             // cb = callback
             cb(result);
         })
