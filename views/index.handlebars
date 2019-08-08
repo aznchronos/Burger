@@ -1,12 +1,12 @@
-<h1>Sandviches!!</h1>
+<h1 class="title">Sandviches!!</h1>
 
 {{!-- Link to Video --}}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aYAGB11YrSs" frameborder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <div class="row">
-    <div class="col-5 lg">
-        Available:
+    <div class="col-5 lg m-4 float-left">
+        <h4 class="text-center">Available:</h4>
         <ul>
             {{#each burgers}}
             {{#unless devoured}}
@@ -15,23 +15,26 @@
             {{/each}}
         </ul>
     </div>
-    <div class="col-5 lg">
-        Unavailable:
-
-        {{#each burgers}}
-        {{!-- {{#if this.devoured}}{{else}}<li class="list-group-item">{{this.id}}</li> --}}
-        {{#if devoured}}
-        {{> burgers/burger-away}}
-        {{/if}}
-        {{/each}}
+    <div class="col-5 lg m-4 float-right">
+        <h4 class="text-center">Unavailable:</h4>
+        <ul>
+            {{#each burgers}}
+            {{!-- {{#if this.devoured}}{{else}}<li class="list-group-item">{{this.id}}</li> --}}
+            {{#if devoured}}
+            {{> burgers/burger-away}}
+            {{/if}}
+            {{/each}}
+        </ul>
     </div>
 </div>
 
-<h4>Add Another Burger</h4>
-<form class="create-form">
-    <div class="form-group">
-        <label for="bu">Burger Name:</label>
-        <input type="text" id="bu" name="name">
-    </div>
-    <button type="submit">submit</button>
-</form>
+<div class="blockers">
+    <h4 class="addMoar">Add Another Burger</h4>
+    <form class="create-form">
+        <div class="form-group">
+            <label for="bu">Burger Name:</label>
+            <input type="text" id="bu" name="name">
+        </div>
+        <button type="submit">submit</button>
+    </form>
+</div>

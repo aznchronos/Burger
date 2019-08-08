@@ -1,0 +1,80 @@
+.container{ 
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+    opacity: 0.94;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+ul {
+    margin-left: -15px;
+}
+
+li {
+    padding: 10px;
+    margin: 5px;
+    background: #faebd7;
+    text-align: left;
+}
+
+.container .title{
+    background-color: skyblue;
+    padding: 5px;
+}
+
+.container .change-devoured, .delete-burger{
+    float: right;
+}
+
+.container .row h4{
+    background-color: skyblue;
+}
+
+.container .addMoar{
+    margin: 5px;
+    padding: 5px;
+    background: skyblue;
+}
+
+.container .blockers{
+    border-style: dashed;
+    background-color: white;
+    margin: 10px;
+}
+
+.container button{
+    margin-bottom: 10px;
+}
+
+.container iframe {
+    margin-top: 20px;
+}
+
+.container h1{
+    font-size: 100px;
+}
+
+.container .col-5{
+    border-style: dashed;
+    margin: 5px;
+    padding: 5px;
+    /* background-color: lightgrey; */
+}
+
+body {
+    background-image: url("../img/fast-food-bg.jpg");
+    background-repeat: repeat;
+    /* background-position: fixed; */
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        min-width: 95%;
+    }
+
+    .container .row{
+        text-align: center;
+    }
+}
