@@ -1,15 +1,31 @@
 <h1>Sandviches!!</h1>
 
 {{!-- Link to Video --}}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aYAGB11YrSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aYAGB11YrSs" frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
+<div class="row">
+    <div class="col-5 lg">
+        Available:
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
             {{> burgers/burger-block devoured=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col-5 lg">
+        Unavailable:
+
+        {{#each burgers}}
+        {{!-- {{#if this.devoured}}{{else}}<li class="list-group-item">{{this.id}}</li> --}}
+        {{#if devoured}}
+        {{> burgers/burger-away}}
+        {{/if}}
+        {{/each}}
+    </div>
+</div>
 
 <h4>Add Another Burger</h4>
 <form class="create-form">
